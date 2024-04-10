@@ -26,7 +26,7 @@ public class PessoaBean implements Serializable{
 	public String adicionar() {
 		pessoas.add(pessoa);
 		pessoa = new Pessoa();
-		System.out.println("Nome     Profissão");
+		System.out.println("Nome    ---    Profissão");
 		for (Pessoa pessoa:pessoas) {
 			System.out.print(pessoa.getNome()+ "   ");
 			System.out.println(pessoa.getProfissao());

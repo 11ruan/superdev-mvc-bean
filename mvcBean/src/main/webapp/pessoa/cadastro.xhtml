@@ -13,8 +13,15 @@
 	<h1>Cadastro de Pessoas</h1>
 	<h:form>
 		<h:panelGrid columns="2">
+		
 		<h:outputText value="Nome" />
 		<h:inputText value="#{pessoaBean.pessoa.nome}" />
+		
+		<h:outputText value="Idade" />
+		<h:inputText value="#{pessoaBean.pessoa.idade}" />
+		
+		<h:outputText value="Cidade" />
+		<h:inputText value="#{pessoaBean.pessoa.cidade}" />
 		
 		<h:outputText value="Profissão" />
 		<h:inputText value="#{pessoaBean.pessoa.profissao}" />

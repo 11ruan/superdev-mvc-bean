@@ -20,18 +20,26 @@ public class PessoaBean implements Serializable{
 	
 	@Inject
 	private Pessoa pessoa;
+	private int contador = 0;
 	
 	List<Pessoa> pessoas = new ArrayList<Pessoa>();
 	
+
+	public int gerarId () {
+	    return contador++;
+	}
+	
 	public String adicionar() {
+		pessoa.setId(gerarId());
 		pessoas.add(pessoa);
 		pessoa = new Pessoa();
-		System.out.println("Nome    ---    Profissão");
+		System.out.println("Nome     Profissão");
 		for (Pessoa pessoa:pessoas) {
+			System.out.println(pessoa.getId()+ "   ");
 			System.out.print(pessoa.getNome()+ "   ");
 			System.out.println(pessoa.getProfissao());
 		}
-		return null;
+		return "lista.xhtml";
 	}
 
 

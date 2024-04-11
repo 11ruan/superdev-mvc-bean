@@ -13,8 +13,23 @@
 		<h:dataTable value="#{pessoaBean.pessoas}" var="pessoa">
 			
 			<h:column>
+				<f:facet name="header">ID</f:facet>
+				#{pessoa.id}	
+			</h:column>
+			
+			<h:column>
 				<f:facet name="header">Nome</f:facet>
 				#{pessoa.nome}	
+			</h:column>
+			
+			<h:column>
+				<f:facet name="header">Idade</f:facet>
+				#{pessoa.idade}	
+			</h:column>
+			
+			<h:column>
+				<f:facet name="header">Cidade</f:facet>
+				#{pessoa.cidade}	
 			</h:column>
 			
 			<h:column>
